@@ -1,10 +1,10 @@
 # Database-Workload-Firebreak:-
 A middleware-based system for multi-Application database workload governance, performance improvement, and workload protection.
 
-## Problem:-
+## Problem:
 In a shared database environment, one application can generate excessive or resource-intensive requests. This can consume a large number of available resources and negatively affect the performance of other applications.This project introduces a workload governance layer that manages requests before they reach the shared database.
 
-## Objectives:-
+## Objectives:
 - **Work Isolation**  
   Isolate workloads between applications so that an overloaded application cannot negatively impact others. This is achieved through resource limits, admission control, and per-application queues.
 
@@ -17,7 +17,7 @@ In a shared database environment, one application can generate excessive or reso
 - **Real-time Monitoring**  
   Provide a monitoring dashboard to track application workloads, request status, resource usage, queue activity, and overall system performance in real time.
 
-## Proposed Architecture:-
+## Proposed Architecture:
 ```mermaid
 flowchart TD
     Client["Client Applications"]
