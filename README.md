@@ -5,14 +5,19 @@ A middleware-based system for multi-Application database workload governance, pe
 In a shared database environment, one application can generate excessive or resource-intensive requests. This can consume a large number of available resources and negatively affect the performance of other applications.This project introduces a workload governance layer that manages requests before they reach the shared database.
 
 ## Objectives:-
-->  Provide Work Isolation Between Applications.So that one application on being overloaded does not affect others negatively using      resource limits, admission control, and per-Appliaction queues.
-->Ensure Fair Resource Sharing instead of allowing one workload to monopolize resources using Weighted Round Robin scheduling.
-->Control and Manage Database Workloads before allowing them to access the database using Process/Thread Scheduling, queues.
-->Provide a monitoring dashboard to track Applications workloads, request status, resource usage, queue activity, and system performance metrics in real time using process/thread scheduling, resource management and database monitoring.
+- **1.Work Isolation**  
+  Isolate workloads between applications so that an overloaded application cannot negatively impact others. This is achieved through resource limits, admission control, and per-application queues.
+
+- **2.Fair Resource Sharing**  
+  Ensure fair distribution of database resources using Weighted Round Robin scheduling, preventing any single workload from monopolizing system resources.
+
+- **3.Controlled Workload Management**  
+  Manage and control database workloads before they reach the shared database using process/thread scheduling and queuing mechanisms.
+
+- **4.Real-time Monitoring**  
+  Provide a monitoring dashboard to track application workloads, request status, resource usage, queue activity, and overall system performance in real time.
 
 ## Proposed Architecture:-
-## Proposed Architecture
-
 ```mermaid
 flowchart TD
     Client["Client Applications"]
