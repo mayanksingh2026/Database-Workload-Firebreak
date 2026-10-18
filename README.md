@@ -5,16 +5,16 @@ A middleware-based system for multi-Application database workload governance, pe
 In a shared database environment, one application can generate excessive or resource-intensive requests. This can consume a large number of available resources and negatively affect the performance of other applications.This project introduces a workload governance layer that manages requests before they reach the shared database.
 
 ## Objectives:-
-- **1.Work Isolation**  
+- **Work Isolation**  
   Isolate workloads between applications so that an overloaded application cannot negatively impact others. This is achieved through resource limits, admission control, and per-application queues.
 
-- **2.Fair Resource Sharing**  
+- **Fair Resource Sharing**  
   Ensure fair distribution of database resources using Weighted Round Robin scheduling, preventing any single workload from monopolizing system resources.
 
-- **3.Controlled Workload Management**  
+- **Controlled Workload Management**  
   Manage and control database workloads before they reach the shared database using process/thread scheduling and queuing mechanisms.
 
-- **4.Real-time Monitoring**  
+- **Real-time Monitoring**  
   Provide a monitoring dashboard to track application workloads, request status, resource usage, queue activity, and overall system performance in real time.
 
 ## Proposed Architecture:-
