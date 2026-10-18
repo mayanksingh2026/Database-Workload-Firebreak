@@ -11,19 +11,26 @@ In a shared database environment, one application can generate excessive or reso
 ->Provide a monitoring dashboard to track Applications workloads, request status, resource usage, queue activity, and system performance metrics in real time using process/thread scheduling, resource management and database monitoring.
 
 ## Proposed Architecture:-
-```markdown
+## Proposed Architecture
+
 ```mermaid
-flowchart LR
-    Client["Client Applications"] --> Firebreak    
-    subgraph Firebreak["Database Workload Firebreak (Middleware Layer)"]
+flowchart TD
+    Client["Client Applications"]
+    
+    subgraph Firebreak["Database Workload Firebreak<br/>(Middleware Layer)"]
         direction TB
-        A["1. Application Identification"] --> 
-        B["2. Workload Classification"] --> 
-        C["3. Policy Engine"] --> 
-        D["4. Admission Controller"] --> 
-        E["5. Per-Application Queues"] --> 
-        F["6. Weighted Scheduler"] --> 
+        A["1. Application Identification"]
+        B["2. Workload Classification"]
+        C["3. Policy Engine"]
+        D["4. Admission Controller"]
+        E["5. Per-Application Queues"]
+        F["6. Weighted Scheduler"]
         G["7. Worker Pool & Connection Manager"]
+        
+        A --> B --> C --> D --> E --> F --> G
     end
     
-    Firebreak --> DB["Shared Database"]
+    DB["Shared Database"]
+    
+    Client --> Firebreak
+    Firebreak --> DB
